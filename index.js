@@ -1,8 +1,8 @@
-let library = []; //initializes an emplty array
+let library = []; //initialize an emplty array
 
 //--Add new books--
 const addBook = (title, author) => {
-    return library.push({title, author, readStatus:false}) //add a new book
+    library.push({title, author, readStatus:false}) //add a new book
 }
 
 addBook("MyBook", "Jagath");
@@ -28,7 +28,7 @@ console.log(library);
 //--Remove a book--
 const removeBook = (title) => {
     let bookIndex = library.findIndex(book => book.title == title); //find the index of the given book
-    return library.splice(bookIndex, 1);
+    library.splice(bookIndex, 1);
 }
 
 removeBook("NextBook"); 
@@ -75,6 +75,7 @@ const bookExistsSome = (title) => {
 }
 
 bookExistsSome("NewBook");
+
 
 //--Check if the library includes a book by title using 'includes'--
 const bookExistsInclude = (title) => {
