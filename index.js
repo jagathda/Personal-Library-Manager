@@ -5,9 +5,9 @@ const addBook = (title, author) => {
     library.push({title, author, readStatus:false}) //add a new book
 }
 
-addBook("MyBook", "Jagath");
-addBook("NewBook", "Rasika");
-addBook("NextBook", "Dasana");
+addBook("The Pilgrim’s Progress", "John Bunyan");
+addBook("Robinson Crusoe", "Daniel Defoe");
+addBook("Gulliver’s Travels", "DJonathan Swiftasana");
 console.log("After adding books");
 console.log(library); 
 
@@ -19,7 +19,7 @@ const markAsRead = (title) => {
     return library[bookIndex].readStatus = true;
 }
 
-markAsRead("NextBook"); 
+markAsRead("Gulliver’s Travels"); 
 console.log("After readStatus set to true");
 console.log(library); 
 
@@ -31,7 +31,7 @@ const removeBook = (title) => {
     library.splice(bookIndex, 1);
 }
 
-removeBook("NextBook"); 
+removeBook("Gulliver’s Travels"); 
 console.log("Results after removing a book");
 console.log(library); 
 
@@ -59,7 +59,7 @@ const findBooksByAuthor = (author) => {
     });
 }   
 
-findBooksByAuthor("Jagath");
+findBooksByAuthor("John Bunyan");
 
 
 
@@ -74,7 +74,7 @@ const bookExistsSome = (title) => {
     }
 }
 
-bookExistsSome("NewBook");
+bookExistsSome("Robinson Crusoe");
 
 
 //--Check if the library includes a book by title using 'includes'--
@@ -87,4 +87,4 @@ const bookExistsInclude = (title) => {
     }
 }
 
-bookExistsInclude("NewBook");
+bookExistsInclude("Robinson Crusoe");
